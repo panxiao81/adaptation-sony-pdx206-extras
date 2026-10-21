@@ -1,0 +1,6 @@
+# Our own builds (forks of Droidian packages, kernel, mesa, mm-ofono) must win
+# over Droidian's (10-droidian, 1002) and archiemeng's custom-debs (90custom,
+# 1010). Both are above 1000, which lets apt downgrade, so ours goes higher.
+Package: *
+Pin: release o=pdx206-apt
+Pin-Priority: 1100
