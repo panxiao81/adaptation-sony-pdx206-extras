@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+if [ "$1" = remove ] || [ "$1" = abort-install ] || [ "$1" = disappear ]; then
+	dpkg-divert --package adaptation-sony-pdx206-extras --remove --rename \
+		--divert /usr/share/mobile-broadband-provider-info/serviceproviders.xml.mbpi /usr/share/mobile-broadband-provider-info/serviceproviders.xml
+fi
+#DEBHELPER#

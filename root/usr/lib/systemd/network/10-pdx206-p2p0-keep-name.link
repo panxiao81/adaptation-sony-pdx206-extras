@@ -1,0 +1,8 @@
+# pdx206: qcacld creates wlan0 and p2p0 on the same PCI device (0000:01:00.0),
+# so 99-default.link gives both the path name wlp1s0 and the rename races.
+# Keep p2p0 as is; wlan0 alone becomes wlp1s0.
+[Match]
+OriginalName=p2p0
+
+[Link]
+Name=p2p0

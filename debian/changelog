@@ -1,0 +1,5 @@
+adaptation-sony-pdx206-extras (0.1.0) unstable; urgency=medium
+
+  * Initial release: package the hand-made pdx206 device changes.
+
+ -- panxiao81 <pan-xiao@live.cn>  Wed, 21 Oct 2026 00:00:00 +0900

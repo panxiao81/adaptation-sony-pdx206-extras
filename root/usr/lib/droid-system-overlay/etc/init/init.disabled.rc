@@ -1,0 +1,32 @@
+# Copyright (C) 2020 - Dreemurrs Embedded Labs
+#
+# These services are disabled due to them being unnecessary critical process
+# and crash loop.
+#
+# droid-system-overlay: imsdatadaemon and ims_rtp_daemon are re-enabled
+# for VoLTE through ofono-binder-plugin-ext-qti.
+
+service lmkd lmkd_HYBRIS_DISABLED
+    disabled
+    oneshot
+    override
+
+service vendor.audio-hal-2-0 android.hardware.audio@2.0-service_HYBRIS_DISABLED
+    disabled
+    oneshot
+    override
+
+service vendor.audio-hal android.hardware.audio.service_DISABLED
+    disabled
+    oneshot
+    override
+
+service vendor.usb-hal-1-1 android.hardware.usb@1.1-service_HYBRIS_DISABLED
+    disabled
+    oneshot
+    override
+
+# Disable console as it conflicts with the rootfs console
+service console /system/bin/sh_HYBRIS_DISABLED
+    disabled
+    override

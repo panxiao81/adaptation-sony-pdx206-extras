@@ -1,0 +1,31 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: adaptation-sony-pdx206-extras
+
+Files: *
+Copyright: 2026 panxiao81 <pan-xiao@live.cn>
+License: GPL-2.0-or-later
+
+Files: apn/apns-conf.xml
+Copyright: 2006 The Android Open Source Project
+           2015 Sony Mobile Communications Inc.
+Comment: /system/etc/apns-conf.xml from XQ-AS42 firmware 58.2.A.10.163.
+License: Apache-2.0
+
+Files: apn/carrier_list.textpb apn/mcc-iso.json
+Copyright: The Android Open Source Project
+Comment: carrier_list.textpb from the same firmware's TelephonyProvider;
+ mcc-iso.json derived from AOSP's MccTable.java.
+License: Apache-2.0
+
+Files: root/usr/lib/droid-system-overlay/etc/init/init.disabled.rc
+Copyright: 2020 Dreemurrs Embedded Labs
+Comment: Halium/Droidian's list with the IMS daemons removed.
+License: GPL-2.0-or-later
+
+License: GPL-2.0-or-later
+ On Debian systems, the full text of the GNU General Public License
+ version 2 can be found in /usr/share/common-licenses/GPL-2.
+
+License: Apache-2.0
+ On Debian systems, the full text of the Apache License version 2.0
+ can be found in /usr/share/common-licenses/Apache-2.0.

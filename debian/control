@@ -1,0 +1,21 @@
+Source: adaptation-sony-pdx206-extras
+Section: misc
+Priority: optional
+Maintainer: panxiao81 <pan-xiao@live.cn>
+Build-Depends: debhelper-compat (= 13), python3
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+
+Package: adaptation-sony-pdx206-extras
+Architecture: all
+Depends: ${misc:Depends},
+         adaptation-sony-pdx206-configs,
+         lxc-android,
+         mobile-broadband-provider-info,
+         ofono-binder-plugin-ext-qti,
+         ofono-configs-binder-common,
+Description: Sony Xperia 5 II (pdx206) settings on top of the Droidian adaptation
+ Dual SIM and IMS/VoLTE in oFono, IMS daemons left enabled in the Android
+ container, APN database from Sony's stock firmware, no IPv6 default route
+ over rmnet, a stable wlp1s0 name, and no cgroup v1 cpuset mount (the
+ kernel's cpuset lives in cgroup v2).

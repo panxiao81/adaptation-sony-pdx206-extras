@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+SP = /usr/share/mobile-broadband-provider-info/serviceproviders.xml
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	mkdir -p build
+	python3 apn/apns2ofono.py apn/apns-conf.xml apn/carrier_list.textpb \
+		apn/mcc-iso.json build/serviceproviders.xml
+	python3 apn/apns2ofono.py --check build/serviceproviders.xml
+
+override_dh_auto_install:
+	mkdir -p debian/adaptation-sony-pdx206-extras
+	cp -a root/. debian/adaptation-sony-pdx206-extras/
+	install -Dm644 build/serviceproviders.xml debian/adaptation-sony-pdx206-extras$(SP)
+
+override_dh_auto_clean:
+	rm -rf build
