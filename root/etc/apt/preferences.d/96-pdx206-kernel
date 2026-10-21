@@ -1,0 +1,7 @@
+# Our kernel comes from pdx206-apt. ArchieMeng's custom-debs (pinned 1010 by
+# 90custom) ships the same linux-*-sony-pdx206 meta packages and the versioned
+# 4.19-325 packages; their bootimage postinst flashes boot, so never take any
+# of them from there. Everything else from custom-debs stays at 1010.
+Package: /^linux-(image|bootimage|headers)-(4\.19-325-)?sony-pdx206$/
+Pin: release o=custom-debs
+Pin-Priority: -1
